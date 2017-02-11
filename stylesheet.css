@@ -1,0 +1,366 @@
+/* RITE OF SPRING CSS */
+
+body {
+  margin: 0;
+}
+
+@media screen and (min-width: 769px) {
+
+  html {
+    font-size: 2vw;
+  }
+
+  .col-1-4 div {
+    position: relative;
+    margin-right: 8em;
+    margin: 4em 14em 0 3em;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  html {
+    font-size: 3vw;
+  }
+
+  .col-1-4 div {
+    margin: 4em 2em 0 2em;
+  }
+
+}
+
+/* for later
+@media screen and (min-width: 320px, max-width: 768px) {
+
+  html {
+    font-size: 5vw;
+  }
+
+  nav {
+    display: none;
+  }
+*/
+
+/* FONT STACK */
+
+@import url('https://fonts.googleapis.com/css?family=Cousine');
+
+h1 {
+  font-family: Didot, Times, georgia, serif;
+  font-size: 2em;
+  color: #777;
+}
+
+h2 {
+  font-family: Didot, Times, georgia, serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #777;
+}
+
+h2 a {
+  text-decoration: none;
+  color: #333;
+}
+
+h2 a:hover {
+  text-decoration: none;
+  color: #333;
+  background-color: yellow;
+  font-style: italic;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 1.3em;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: Cousine, Fira Mono, monospace, sans-serif;
+  font-size: 0.5em;
+  line-height: 2.5em;
+  color: #ddd;
+  font-weight: 100;
+  letter-spacing: 0.2em;
+}
+
+p, #reversemirror {
+  font-family: Cousine, Fira Mono, monospace, sans-serif;
+  color: #aaa;
+  font-size: 0.6em;
+  line-height: 1.7em;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  font-family: Didot, Fira Mono, monospace, sans-serif;
+  color: #888;
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* FONT STACK */
+
+/* NAV THINGS */
+
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f8f8f8;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+}
+
+#mainlist {
+  margin-top: 2em;
+  margin-left: -1.5em;
+  padding-top: 0;
+}
+
+#mainlist a {
+  text-decoration: none;
+  color: #bbb;
+}
+
+#mainlist a:hover {
+  text-decoration: none;
+  color: #333;
+  background-color: yellow;
+  font-style: italic;
+}
+
+/* SUBLIST SETTINGS */
+#sublist {
+  text-align: left;
+}
+
+.sublist {
+  display: block;
+  font-family: Cousine, Fira Mono, monospace;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 0.4em;
+  line-height: 1.2em;
+  padding: 3% 20% 3% 20%;
+  border-bottom: 2px solid #eee;
+}
+
+/*
+.active-page {
+  background-color: ;
+} */
+
+/* NAV THINGS END */
+
+/* INTERACTIONS START */
+a.linehover {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+a.linehover:hover {
+  color: #000;
+}
+
+a.linehover:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+  height: 0.4em;
+  bottom: 0;
+  left: 0;
+  background-color: yellow;
+  visibility: hidden;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+a.linehover:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+/* FLIP TEXT FRAME */
+#mirror {
+  background-color: yellow;
+  padding: 2em;
+  border-left: 15px solid yellow;
+
+  transition: all 1s 10s ease; /*first number is duration, second is delay. This ensures the thing spins back intead of snapping back.*/
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -moz-transform: scale(-1, -1);
+  -webkit-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  -ms-transform: scale(-1, -1);
+  transform: scale(-1, -1);
+}
+
+#mirror p {
+  color: yellow;
+  transition-duration: 1s;
+  transition-delay: 5s;
+}
+
+#mirror:hover > p {
+  color: #777;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+
+#mirror:hover {
+  background-color: #f8f8f8;
+  padding: 4em;
+  transition: 1s;
+  border-left: 15px solid yellow;
+
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+#reversemirror { /*this is for the (HOVER OVER ME) text only */
+  color: #000;
+  transition: all 0s ease 10s;
+  -moz-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+#mirror:hover > #reversemirror {
+  transition-delay: 0s;
+  visibility: hidden;
+}
+/* FLIP TEXT FRAME END */
+
+#imagehover1:hover:after {
+  position: relative;
+}
+
+#imagehover1:hover:after {
+  content: url(./images/MSea.jpg);
+  display: block;
+  position: absolute;
+  opacity: 0.5;
+  left: 0;
+}
+
+#partone_1:hover:after {
+  position: relative;
+}
+
+#partone_1:hover:after {
+  content: url(./images/partone_1.jpg);
+  display: block;
+  position: relative;
+  opacity: 0.5;
+  left: 0;
+  top: 0;
+}
+
+#width150 {
+  width: 150%;
+}
+
+.speedkern {
+  transition: 1.5s;
+}
+
+.speedkern:hover {
+  letter-spacing: 20px;
+  overflow: auto;
+}
+
+/* INTERACTIONS END */
+
+/*
+.col-1-2 .index-col-2 p {
+  font-size: 10em;
+  -webkit-transform: rotate(90deg);
+  line-height: 1em;
+  font-family: helvetica, sans-serif;
+}
+*/
+
+/* Section specific CSS */
+
+.index {
+  padding: 0 20% 0 20%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+[class*='col-'] {
+  float: left;
+}
+
+.grid {
+  width: auto;
+}
+
+.col-1-2 {
+  width: 25%;
+  height: 80%;
+  background-color: #f8f8f8;
+}
+
+.col-1-4 {
+  width: 75%;
+  background-color: #ffffff;
+}
+
+/* Elements */
+
+hr {
+  display: block;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #eee;
+}
+
+#endofpage {
+  height: 4em;
+}
+
+nav {
+  cursor: url(./svg/cursor_eye.png) 15 20, auto;
+}
+
+nav a {
+  cursor: url(./svg/cursor_eye_closed.png) 15 20, auto;
+}
+
+/* Images */
+
+.introduction img, .parttwo img {
+  width: 100%;
+  height: auto;
+}
+
+/* Video */
+
+#video1 {
+  opacity: 0.7;
+  left: 0;
+  width: 100%;
+}
