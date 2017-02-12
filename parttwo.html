@@ -32,7 +32,7 @@ $(function() {
 
 <body>
 
-<div id="parttwoimg"><img src="./images/parttwo_1.jpg" width="300"></div>
+<div id="parttwoimg"><img src="./images/sequence/sequence_0.png" width="150%"></div>
 
 <!-- Change Image on Scroll -->
 <script>
@@ -40,14 +40,41 @@ var onScrollHandler = function() {
   var yourImageElement = document.querySelector('#parttwoimg img')
   var newImageUrl = yourImageElement.src;
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  if (scrollTop > 1600) {
-     newImageUrl = "./images/sequence/sequence_1.jpg"
+  if (scrollTop > 10000) {
+     newImageUrl = "./images/sequence/sequence_0.png"
   }
-  if (scrollTop > 5800) {
-     newImageUrl = "./images/sequence/sequence_2.jpg"
+  if (scrollTop > 10100) {
+     newImageUrl = "./images/sequence/sequence_1.png"
   }
-  if (scrollTop > 9000) {
-     newImageUrl = "./images/sequence/sequence_3.jpg"
+  if (scrollTop > 10200) {
+     newImageUrl = "./images/sequence/sequence_2.png"
+  }
+  if (scrollTop > 10300) {
+     newImageUrl = "./images/sequence/sequence_3.png"
+  }
+  if (scrollTop > 10400) {
+     newImageUrl = "./images/sequence/sequence_4.png"
+  }
+  if (scrollTop > 10500) {
+     newImageUrl = "./images/sequence/sequence_5.png"
+  }
+  if (scrollTop > 10600) {
+     newImageUrl = "./images/sequence/sequence_6.png"
+  }
+  if (scrollTop > 10700) {
+     newImageUrl = "./images/sequence/sequence_7.png"
+  }
+  if (scrollTop > 10800) {
+     newImageUrl = "./images/sequence/sequence_8.png"
+  }
+  if (scrollTop > 10900) {
+     newImageUrl = "./images/sequence/sequence_9.png"
+  }
+  if (scrollTop > 11000) {
+     newImageUrl = "./images/sequence/sequence_10.png"
+  }
+  if (scrollTop > 11100) {
+     newImageUrl = "./images/sequence/sequence_0.png"
   }
   yourImageElement.src = newImageUrl;
 };

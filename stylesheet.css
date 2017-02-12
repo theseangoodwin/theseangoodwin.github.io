@@ -359,8 +359,8 @@ nav a {
 
 #parttwoimg {
   position: fixed;
-  right: 0px;
-  bottom: 90px;
+  right: 2em;
+  bottom: 1em;
   z-index: 0;
 }
 
