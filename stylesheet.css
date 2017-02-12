@@ -286,7 +286,6 @@ a.linehover:hover:before {
 
 .speedkern:hover {
   letter-spacing: 20px;
-  overflow: auto;
 }
 
 /* INTERACTIONS END */
@@ -314,6 +313,7 @@ a.linehover:hover:before {
 
 .grid {
   width: auto;
+  z-index: 1;
 }
 
 .col-1-2 {
@@ -356,6 +356,19 @@ nav a {
   width: 100%;
   height: auto;
 }
+
+#parttwoimg {
+  position: fixed;
+  right: 0px;
+  bottom: 90px;
+  z-index: 0;
+}
+
+/* IMAGE SEQ */
+
+
+
+/* IMAGE SEQ */
 
 /* Video */
 

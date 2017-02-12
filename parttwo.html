@@ -32,6 +32,29 @@ $(function() {
 
 <body>
 
+<div id="parttwoimg"><img src="./images/parttwo_1.jpg" width="300"></div>
+
+<!-- Change Image on Scroll -->
+<script>
+var onScrollHandler = function() {
+  var yourImageElement = document.querySelector('#parttwoimg img')
+  var newImageUrl = yourImageElement.src;
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (scrollTop > 1600) {
+     newImageUrl = "./images/sequence/sequence_1.jpg"
+  }
+  if (scrollTop > 5800) {
+     newImageUrl = "./images/sequence/sequence_2.jpg"
+  }
+  if (scrollTop > 9000) {
+     newImageUrl = "./images/sequence/sequence_3.jpg"
+  }
+  yourImageElement.src = newImageUrl;
+};
+document.addEventListener ("scroll", onScrollHandler);
+</script>
+<!-- Change Image on Scroll END -->
+
 <!-- Nav Starts Here -->
       <nav id="nav">
         <ul id="mainlist">
@@ -62,6 +85,7 @@ $(function() {
         </ul>
       </nav>
 <!-- Nav Ends Here -->
+
 
       <div class="grid">
           <div class="col-1-2">
@@ -202,6 +226,59 @@ Residence</h3>
 <h2>8. Home</h2>
 
 <p>The hardest part is arriving but now I am finally here. I’ve worked diligently to make my own way to this country and now she is reciprocating back to me. She has given me a part of herself to call my own, she makes me feel safe, and she allows me to recover after I give the day all I have. While undoubtedly there are things around me that will fall apart, I now know that even the space above my bed is helping me to build my dreams.</p>
+
+<!-- ==========
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+
+<div class="spacer s2"></div>
+<div class="spacer s0" id="trigger"></div>
+<div id="imagesequence">
+	<img id="myimg" src="./images/sequence/sequence_1.jpg"><br>
+</div>
+<div class="spacer s2"></div>
+<script>
+	// define images
+	var images = [
+		"./images/sequence/sequence_1.jpg",
+		"./images/sequence/sequence_2.jpg",
+		"./images/sequence/sequence_3.jpg",
+		"./images/sequence/sequence_4.jpg",
+		"./images/sequence/sequence_5.jpg"
+	];
+
+	// TweenMax can tween any property of any object. We use this object to cycle through the array
+	var obj = {curImg: 0};
+
+	// create tween
+	var tween = TweenMax.to(obj, 0.5,
+		{
+			curImg: images.length - 1,	// animate propery curImg to number of images
+			roundProps: "curImg",				// only integers so it can be used as an array index
+			repeat: 3,									// repeat 3 times
+			immediateRender: true,			// load first image automatically
+			ease: Linear.easeNone,			// show every image the same ammount of time
+			onUpdate: function () {
+			  $("#myimg").attr("src", images[obj.curImg]); // set the image source
+			}
+		}
+	);
+
+	// init controller
+	var controller = new ScrollMagic.Controller();
+
+	// build scene
+	var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 300})
+					.setTween(tween)
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+
+	});
+</script>
+
+ ========== -->
 
 <a name="section-9"><hr></a>
 
