@@ -10,7 +10,7 @@ body {
     font-size: 2vw;
   }
 
-  .col-1-4 div {
+  .col-1-4 .innerwrap {
     position: relative;
     margin-right: 8em;
     margin: 4em 14em 0 3em;
@@ -48,7 +48,8 @@ body {
 
 h1 {
   font-family: Didot, Times, georgia, serif;
-  font-size: 2em;
+  font-size: 3em;
+  line-height: 1.6em;
   color: #777;
 }
 
@@ -61,7 +62,7 @@ h2 {
 
 h2 a {
   text-decoration: none;
-  color: #333;
+  color: #777;
 }
 
 h2 a:hover {
@@ -192,7 +193,7 @@ a.linehover:hover:before {
 }
 
 /* FLIP TEXT FRAME */
-#mirror {
+.mirror {
   background-color: yellow;
   padding: 2em;
   border-left: 15px solid yellow;
@@ -210,19 +211,19 @@ a.linehover:hover:before {
   transform: scale(-1, -1);
 }
 
-#mirror p {
+.mirror p {
   color: yellow;
   transition-duration: 1s;
   transition-delay: 5s;
 }
 
-#mirror:hover > p {
+.mirror:hover > p {
   color: #777;
   transition-duration: 1s;
   transition-delay: 0s;
 }
 
-#mirror:hover {
+.mirror:hover {
   background-color: #f8f8f8;
   padding: 4em;
   transition: 1s;
@@ -245,11 +246,69 @@ a.linehover:hover:before {
   transform: scale(1, 1);
 }
 
-#mirror:hover > #reversemirror {
+.mirror:hover > #reversemirror {
   transition-delay: 0s;
   visibility: hidden;
 }
 /* FLIP TEXT FRAME END */
+
+.imglink {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap
+}
+
+.imglink:before {
+    /*underline*/
+    content: '';
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    width: 100%;
+    height: 0.5em;
+    background: yellow;
+    transition: 0.35s cubic-bezier(0.525, 0.16, 0.225, 1)
+}
+
+.imglink img {
+    position: absolute;
+    width: 100%;
+
+  /* image position */
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 150ms ease;
+}
+
+.imglink a {
+    position: relative;
+    color: #000;
+    cursor: none;
+}
+
+.imglink:hover img {
+    /* controls size of image */
+    width: 300%;
+
+    visibility: visible;
+    opacity: 1;
+    transition: 150ms ease;
+}
+
+
+.imglink:hover:before {
+    left: 100%;
+    width: 0%
+}
 
 #imagehover1:hover:after {
   position: relative;
@@ -257,10 +316,11 @@ a.linehover:hover:before {
 
 #imagehover1:hover:after {
   content: url(./images/MSea.jpg);
-  display: block;
-  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  vertical-align: baseline;
   opacity: 0.5;
-  left: 0;
 }
 
 #partone_1:hover:after {
@@ -301,6 +361,19 @@ a.linehover:hover:before {
 
 /* Section specific CSS */
 
+
+/* main image at the top of pages */
+.mainimage {
+  position: relative;
+  width: 100%;
+}
+
+.mainimage h1 {
+  position: absolute;
+  top: -20%;
+}
+/* end */
+
 .index {
   padding: 0 20% 0 20%;
   padding-top: 100px;
@@ -327,6 +400,35 @@ a.linehover:hover:before {
   background-color: #ffffff;
 }
 
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/* SECTIONS */
+
+#section2 {
+  width: 125%;
+  text-align: right;
+  margin-left: 25%;
+}
+
+#section3 {
+  width: 125%;
+}
+
+#section4 {
+  width: 120%;
+  margin-left: 25%;
+}
+
+#section5 {
+  margin-left: 0%;
+}
+
 /* Elements */
 
 hr {
@@ -350,6 +452,21 @@ nav a {
   cursor: url(./svg/cursor_eye_closed.png) 15 20, auto;
 }
 
+.circle {
+  display: block;
+  position: absolute;
+	width: 20em;
+	height: 20em;
+  left: -30%;
+	background: yellow;
+  opacity: 0.9;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+  z-index: 1;
+}
+
+
 /* Images */
 
 .introduction img, .parttwo img {
@@ -359,8 +476,8 @@ nav a {
 
 #parttwoimg {
   position: fixed;
-  right: 2em;
-  bottom: 1em;
+  top: 50%;
+  left: 50%;
   z-index: 0;
 }
 
@@ -376,4 +493,12 @@ nav a {
   opacity: 0.7;
   left: 0;
   width: 100%;
+  transition: 200ms ease;
+}
+
+#video1:hover {
+  transform: scale(2.6);
+  width: 100%;
+  opacity: 0.1;
+  transition: 200ms ease;
 }
