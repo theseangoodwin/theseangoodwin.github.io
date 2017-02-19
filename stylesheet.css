@@ -483,14 +483,14 @@ nav a {
 
 /* SVG */
 
-#m-t-p-path {
+#m-t-p-path, #VB-M-1-path, #M-A-G-path {
   fill: none;
   stroke: red;
   stroke-width: 3px;
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
-#m-t-p {
+#m-t-p, #VB-M-1, #M-A-G {
   opacity: 0.5;
   position: fixed;
   top: 10%;
@@ -498,13 +498,24 @@ nav a {
   height: 80%;
   margin-left: -5em;
   z-index: 0;
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
-svg  {
-  color: #FF0000;
+svg text {
+    font-family: Cousine, monospace;
+    font-style: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FF0000;
+  }
+
+svg .label-2 {
+  font-size: 0.8em;
 }
 
+svg .label-3 {
+  font-size: 1em;
+}
 
 /* IMAGE SEQ */
 
