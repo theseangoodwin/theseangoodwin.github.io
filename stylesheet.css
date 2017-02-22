@@ -291,8 +291,11 @@ a.linehover:hover:before {
 
 .imglink a {
     position: relative;
-    color: #000;
-    cursor: none;
+    color: #aaa;
+}
+
+.imglink a:hover {
+  color: #fff;
 }
 
 .imglink:hover img {
@@ -303,7 +306,6 @@ a.linehover:hover:before {
     opacity: 1;
     transition: 150ms ease;
 }
-
 
 .imglink:hover:before {
     left: 100%;
@@ -421,12 +423,12 @@ a.linehover:hover:before {
 }
 
 #section4 {
-  width: 120%;
-  margin-left: 25%;
+  width: 150%;
 }
 
 #section5 {
   margin-left: 0%;
+  width: 50%;
 }
 
 /* Elements */
@@ -444,12 +446,16 @@ hr {
   height: 4em;
 }
 
-nav {
-  cursor: url(./svg/cursor_eye.png) 15 20, auto;
+body {
+  cursor: url(./svg/cursor_eye.png) 30 30, auto;
 }
 
-nav a {
-  cursor: url(./svg/cursor_eye_closed.png) 15 20, auto;
+.imglink:hover {
+  cursor: url(./svg/cursor_eye_closed-white.png) 30 30, auto;
+}
+
+.mirror:hover, nav a {
+  cursor: url(./svg/cursor_eye_closed.png) 30 30, auto;
 }
 
 .circle {
@@ -473,6 +479,7 @@ nav a {
 
 .button1:hover {
   border: 4px solid #000;
+  background-color: yellow;
 }
 
 /* Images */
