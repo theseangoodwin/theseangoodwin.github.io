@@ -256,7 +256,6 @@ a.linehover:hover:before {
     position: relative;
     cursor: pointer;
     display: inline-block;
-    white-space: nowrap
 }
 
 .imglink:before {
