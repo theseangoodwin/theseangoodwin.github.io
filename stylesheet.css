@@ -6,7 +6,7 @@ body {
 
 /* Index CSS */
 #index {
-  height: 100%;
+  padding: 0 10% 0 10%;
   overflow-x: hidden;
   overflow-y: hidden;
   overflow: hidden;
@@ -22,14 +22,21 @@ body {
   align-items: center;
   flex-direction: column;
   letter-spacing: 0.2em;
+  text-align: center;
 }
 
 .container h1 {
   line-height: 0;
+  text-align: center;
 }
 
 #small-H2 {
-  font-size: 0.8em;
+  font-size: 1em;
+}
+
+#small-H2-index {
+  font-size: 1em;
+  text-align: center;
 }
 /* Index CSS End */
 
