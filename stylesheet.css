@@ -249,6 +249,7 @@ ul {
   line-height: 2em;
   font-weight: bold;
   text-align: center;
+  overflow: hidden;
 }
 
 /* FONT STACK */
@@ -285,9 +286,77 @@ nav {
   font-style: italic;
 }
 
+/* OVERLAY TEST */
+
+.overlay {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(240,240,240);
+    background-color: rgba(240,240,240, 0.95);
+    overflow-x: hidden;
+    transition: 0.7s ease-in;
+}
+
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 0.5em;
+    line-height: 2em;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  text-decoration: none;
+  color: #333;
+  background-color: yellow;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 2em;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 30px;
+}
+
+.closebtn {
+  font-family: 'Cormorant Garamond', Times, georgia, serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  color: #777;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* OVERLAY TEST END */
+
 /* SUBLIST SETTINGS */
 #sublist {
   text-align: left;
+  padding-left: 30%;
+  padding-right: 30%;
 }
 
 .sublist {
@@ -295,10 +364,10 @@ nav {
   font-family: 'Fira Mono', 'Cousine', monospace;
   font-weight: 100;
   letter-spacing: 1px;
-  font-size: 0.4em;
-  line-height: 1.2em;
+  /* font-size: 0.4em;
+  line-height: 1.2em; */
   padding: 3% 20% 3% 20%;
-  border-bottom: 2px solid #eee;
+  /* border-bottom: 2px solid #eee; */
 }
 
 /*
@@ -344,7 +413,7 @@ a.linehover:hover:before {
 /* FLIP TEXT FRAME */
 .mirror {
   background-color: yellow;
-  padding: 2em;
+  padding: 2em 1em 2em 1em;
   border-left: 15px solid yellow;
 
   transition: all 1s 10s ease; /*first number is duration, second is delay. This ensures the thing spins back intead of snapping back.*/

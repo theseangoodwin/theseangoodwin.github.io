@@ -89,27 +89,9 @@ document.addEventListener ("scroll", onScrollHandler);
       <nav id="nav">
         <ul id="mainlist" class="stagger-list">
           <li><a href="partone.html">I</a></li>
-          <li><a href="parttwo.html" class="active-page">II</a></li>
+          <li><span class="overlaybutton" onclick="openNav()">II</span></li>
 
-            <div id="sublist">
-              <a class="sublist" href="#section-1">1. Maker</a>
-              <a class="sublist" href="#section-2">2. Lufthansa Flight LH0089</a>
-              <a class="sublist" href="#section-3">3. The Handmade Jewel</a>
-              <a class="sublist" href="#section-4">4. A Reflection on Time From 37,001 Feet Above</a>
-              <a class="sublist" href="#section-5">5. --:--</a>
-              <a class="sublist" href="#section-6">6. First Impressions</a>
-              <a class="sublist" href="#section-7">7. The Irony of it All</a>
-              <a class="sublist" href="#section-8">8. Home</a>
-              <a class="sublist" href="#section-9">9. Conspiracy</a>
-              <a class="sublist" href="#section-10">10. Delta: Water and Numbers</a>
-              <a class="sublist" href="#section-11">11. A Reflection on Location at 43°13’ 54.25” N 5° 26’ 4.87” E</a>
-              <a class="sublist" href="#section-12">12. On Losing Sleep</a>
-              <a class="sublist" href="#section-13">13. A Reflection on the Things Around Us When There is Nothing But Sky</a>
-              <a class="sublist" href="#section-14">14. Value and Worth</a>
-              <a class="sublist" href="#section-15">15. Vulnerability</a>
-              <a class="sublist" href="#section-16">16. Focus</a>
-              <a class="sublist" href="#section-17">17. Sunday</a>
-            </div>
+
 
           <li><a href="partthree.html">III</a></li>
           <li><a href="partfour.html">IV</a></li>
@@ -118,6 +100,51 @@ document.addEventListener ("scroll", onScrollHandler);
           <li><a href="partseven.html">VII</a></li>
         </ul>
       </nav>
+
+<!-- OVERLAY -->
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
+  <div class="overlay-content">
+
+    <div id="sublist">
+      <a class="sublist" onclick="closeNav()" href="#section-1">1. Maker</a>
+      <a class="sublist" onclick="closeNav()" href="#section-2">2. Lufthansa Flight LH0089</a>
+      <a class="sublist" onclick="closeNav()" href="#section-3">3. The Handmade Jewel</a>
+      <a class="sublist" onclick="closeNav()" href="#section-4">4. A Reflection on Time From 37,001 Feet Above</a>
+      <a class="sublist" onclick="closeNav()" href="#section-5">5. --:--</a>
+      <a class="sublist" onclick="closeNav()" href="#section-6">6. First Impressions</a>
+      <a class="sublist" onclick="closeNav()" href="#section-7">7. The Irony of it All</a>
+      <a class="sublist" onclick="closeNav()" href="#section-8">8. Home</a>
+      <a class="sublist" onclick="closeNav()" href="#section-9">9. Conspiracy</a>
+      <a class="sublist" onclick="closeNav()" href="#section-10">10. Delta: Water and Numbers</a>
+      <a class="sublist" onclick="closeNav()" href="#section-11">11. A Reflection on Location at 43°13’ 54.25” N 5° 26’ 4.87” E</a>
+      <a class="sublist" onclick="closeNav()" href="#section-12">12. On Losing Sleep</a>
+      <a class="sublist" onclick="closeNav()" href="#section-13">13. A Reflection on the Things Around Us When There is Nothing But Sky</a>
+      <a class="sublist" onclick="closeNav()" href="#section-14">14. Value and Worth</a>
+      <a class="sublist" onclick="closeNav()" href="#section-15">15. Vulnerability</a>
+      <a class="sublist" onclick="closeNav()" href="#section-16">16. Focus</a>
+      <a class="sublist" onclick="closeNav()" href="#section-17">17. Sunday</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+    document.getElementById("myNav").style.opacity = "1";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+    document.getElementById("myNav").style.opacity = "0";
+}
+</script>
+
+<!-- OVERLAY END -->
+
+
 <!-- Nav Ends Here -->
 
       <div class="grid">
