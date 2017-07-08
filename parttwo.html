@@ -89,7 +89,7 @@ document.addEventListener ("scroll", onScrollHandler);
       <nav id="nav">
         <ul id="mainlist" class="stagger-list">
           <li><a href="partone.html">I</a></li>
-          <li><span class="overlaybutton" onclick="openNav()">II</span></li>
+          <li><a><span class="overlaybutton" onclick="openNav()">II</span></a></li>
 
 
 
@@ -103,7 +103,7 @@ document.addEventListener ("scroll", onScrollHandler);
 
 <!-- OVERLAY -->
 
-<div id="myNav" class="overlay">
+<div id="myNav" class="overlay" onclick="closeNav()">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
   <div class="overlay-content">
 
@@ -132,12 +132,14 @@ document.addEventListener ("scroll", onScrollHandler);
 
 <script>
 function openNav() {
-    document.getElementById("myNav").style.height = "100%";
+    document.getElementById("myNav").style.transform = ("translateX(0)");
+    document.getElementById("myNav").style.visibility = "visible";
     document.getElementById("myNav").style.opacity = "1";
 }
 
 function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
+    document.getElementById("myNav").style.transform = ("translateX(-5%)");
+    document.getElementById("myNav").style.visibility = "hidden";
     document.getElementById("myNav").style.opacity = "0";
 }
 </script>
