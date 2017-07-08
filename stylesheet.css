@@ -4,9 +4,109 @@ body {
   margin: 0;
 }
 
+@keyframes slideUpfromBottomSkew {
+
+  0% {
+    transform: translateY(30px) skewY(5deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px) skewY(0deg);
+    opacity: 1;
+  }
+
+}
+
+@keyframes slideUpfromBottom {
+
+  0% {
+    transform: translateY(30px) skewY(2deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px) skewY(0deg);
+    opacity: 1;
+  }
+
+}
+
+.stagger {
+  opacity: 0;
+  animation: slideUpfromBottomSkew 3s ease 1s forwards;
+}
+
+.stagger-list {
+  opacity: 0;
+  animation: slideUpfromBottomSkew 2s ease 1s forwards;
+}
+
+.stagger-content {
+  opacity: 0;
+  animation: slideUpfromBottom 3s ease 200ms forwards;
+}
+
+.stagger-content-delay {
+  opacity: 0;
+  animation: slideUpfromBottom 3s ease 2s forwards;
+}
+
+.stag1 {
+  animation-delay: 0s;
+}
+
+.stag2 {
+  animation-delay: 200ms;
+}
+
+.stag3 {
+  animation-delay: 400ms;
+}
+
+.stag4 {
+  animation-delay: 600ms;
+}
+
+.stag5 {
+  animation-delay: 800ms;
+}
+
+.stag6 {
+  animation-delay: 1000ms;
+}
+
+.stag7 {
+  animation-delay: 1200ms;
+}
+
+.stag8 {
+  animation-delay: 1400ms;
+}
+
+.stag9 {
+  animation-delay: 1600ms;
+}
+
+.stag10 {
+  animation-delay: 1800ms;
+}
+
+.stag11 {
+  animation-delay: 2000ms;
+}
+
+.stag12 {
+  animation-delay: 2200ms;
+}
+
+.stag13 {
+  animation-delay: 2400ms;
+}
+
 /* Index CSS */
 #index {
-  padding: 0 10% 0 10%;
+  margin-top: -5%;
   overflow-x: hidden;
   overflow-y: hidden;
   overflow: hidden;
@@ -32,11 +132,17 @@ body {
 
 #small-H2 {
   font-size: 1em;
+  font-weight: 400;
 }
 
 #small-H2-index {
   font-size: 1em;
   text-align: center;
+  font-weight: 400;
+}
+
+a {
+  font-weight: 400;
 }
 /* Index CSS End */
 
@@ -80,24 +186,27 @@ body {
 */
 
 /* FONT STACK */
-
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
 @import url('https://fonts.googleapis.com/css?family=Cousine');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300');
 
 h1 {
-  font-family: Didot, Times, georgia, serif;
+  font-family: 'Cormorant Garamond', Times, georgia, serif;
+  font-weight: 300;
   font-size: 3em;
   line-height: 1em;
   color: #777;
 }
 
 h2 {
-  font-family: Didot, Times, georgia, serif;
-  font-weight: bold;
+  font-family: 'Cormorant Garamond', Times, georgia, serif;
+  font-weight: 300;
   font-size: 1.5em;
   color: #777;
 }
 
 h2 a {
+  font-weight: 300;
   text-decoration: none;
   color: #777;
 }
@@ -107,14 +216,14 @@ h2 a:hover {
   color: #333;
   background-color: yellow;
   font-style: italic;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 2px;
   line-height: 1.3em;
 }
 
 h3 {
   text-transform: uppercase;
-  font-family: Cousine, Fira Mono, monospace, sans-serif;
+  font-family: 'Fira Mono', 'Cousine', monospace, sans-serif;
   font-size: 0.5em;
   line-height: 2.5em;
   color: #ddd;
@@ -123,16 +232,18 @@ h3 {
 }
 
 p, #reversemirror {
-  font-family: Cousine, Fira Mono, monospace, sans-serif;
+  font-family: 'Fira Mono', 'Cousine', monospace, sans-serif;
   color: #aaa;
   font-size: 0.6em;
-  line-height: 1.7em;
+  line-height: 1.8em;
+  letter-spacing: -0.875;
   text-decoration: none;
 }
 
 ul {
   list-style: none;
-  font-family: Didot, Fira Mono, monospace, sans-serif;
+  font-family: 'Cormorant Garamond', 'Didot', 'Fira Mono', monospace, sans-serif;
+  font-weight: 300;
   color: #888;
   font-size: 1.5em;
   line-height: 2em;
@@ -156,6 +267,7 @@ nav {
 }
 
 #mainlist {
+  font-weight: 300;
   margin-top: 2em;
   margin-left: -1.5em;
   padding-top: 0;
@@ -180,7 +292,7 @@ nav {
 
 .sublist {
   display: block;
-  font-family: Cousine, Fira Mono, monospace;
+  font-family: 'Fira Mono', 'Cousine', monospace;
   font-weight: 100;
   letter-spacing: 1px;
   font-size: 0.4em;
@@ -511,11 +623,13 @@ body {
 .button1 {
   padding: 20px 70px 20px 70px;
   border: 4px solid #eee;
+  font-weight: 300;
 }
 
 .button1:hover {
   border: 4px solid #000;
   background-color: yellow;
+  font-weight: 300;
 }
 
 /* Images */
