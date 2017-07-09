@@ -48,22 +48,22 @@ body {
 
 .stagger {
   opacity: 0;
-  animation: slideUpfromBottomSkew 3s ease 1s forwards;
+  animation: slideUpfromBottomSkew 2s ease 1s forwards;
 }
 
 .stagger-list {
   opacity: 0;
-  animation: slideUpfromBottomSkew 2s ease 1s forwards;
+  animation: slideUpfromBottomSkew 1.2s ease 1s forwards;
 }
 
 .stagger-content {
   opacity: 0;
-  animation: slideUpfromBottom 3s ease 200ms forwards;
+  animation: slideUpfromBottom 2s ease 200ms forwards;
 }
 
 .stagger-content-delay {
   opacity: 0;
-  animation: slideUpfromBottom 3s ease 2s forwards;
+  animation: slideUpfromBottom 2s ease 2s forwards;
 }
 
 .stagger-content-left {
@@ -325,6 +325,7 @@ nav {
 .overlay-content {
   position: relative;
   top: 15%;
+  padding-bottom: 20%;
   height: 100%;
   text-align: center;
 }
@@ -363,6 +364,16 @@ nav {
   font-weight: 300;
   font-size: 1.5em;
   color: #777;
+}
+
+.noscroll {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+}
+
+.scroll {
+  overflow: auto;
 }
 
 @media screen and (max-height: 450px) {

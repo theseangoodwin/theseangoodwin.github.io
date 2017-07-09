@@ -38,38 +38,80 @@ $(function() {
 
 <!-- Nav Starts Here -->
       <nav id="nav">
+        <ul id="mainlist" class="stagger-list">
+          <li><a href="partone.html">I</a></li>
+          <li><a href="parttwo.html">II</a></li>
+          <li><a><span class="overlaybutton" onclick="openNav()">III</span></a></li>
+          <li><a href="partfour.html">IV</a></li>
+          <li><a href="partfive.html">V</a></li>
+          <li><a href="partsix.html">VI</a></li>
+          <li><a href="partseven.html">VII</a></li>
+        </ul>
+      </nav>
+
+<!-- OVERLAY -->
+
+<div id="myNav" class="overlay" onclick="closeNav()">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
+  <div class="overlay-content">
+
+    <div id="sublist">
+      <a class="sublist" href="#section-19">19. A Reflection on the Things I Think I Know</a>
+      <a class="sublist" href="#section-20">20. A Reflection on Language</a>
+      <a class="sublist" href="#section-21">21. A Reflection on Myself</a>
+      <a class="sublist" href="#section-22">22. In Loving Memory</a>
+      <a class="sublist" href="#section-23">23. Case</a>
+      <a class="sublist" href="#section-24">24. A Reflection on Odd Numbers</a>
+      <a class="sublist" href="#section-25">25. Les Calanques: Today for Tomorrow</a>
+      <a class="sublist" href="#section-26">26. Avignon: A Stone’s Throw</a>
+      <a class="sublist" href="#section-27">27. A Reflection on Size</a>
+      <a class="sublist" href="#section-28">28. Avignon: Near Glass Houses</a>
+      <a class="sublist" href="#section-29">29. Today’s Waves</a>
+      <a class="sublist" href="#section-30">30. Noble Goblin</a>
+      <a class="sublist" href="#section-31">31. The Beginning or the End: A Matter of Perspective</a>
+      <a class="sublist" href="#section-32">32. Psalm 69</a>
+      <a class="sublist" href="#section-33">33. A Reflection on the Barriers Language Breaks</a>
+      <a class="sublist" href="#section-34">34. Slipshod</a>
+      <a class="sublist" href="#section-35">35. Naturally</a>
+      <a class="sublist" href="#section-36">36. Somewhere, Moving Fast, Loud Noises</a>
+      <a class="sublist" href="#section-37">37. East and West Coast Come Together For an Agreeable Day in Barcelona</a>
+      <a class="sublist" href="#section-38">38. Lightswitch</a>
+      <a class="sublist" href="#section-39">39. (de)construction</a>
+      <a class="sublist" href="#section-40">40. Timetable</a>
+      <a class="sublist" href="#section-41">41. Minerva, Come</a>
+      <a class="sublist" href="#section-42">42. Wake</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.transform = ("translateX(0)");
+    document.getElementById("myNav").style.visibility = "visible";
+    document.getElementById("myNav").style.opacity = "1";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.transform = ("translateX(-5%)");
+    document.getElementById("myNav").style.visibility = "hidden";
+    document.getElementById("myNav").style.opacity = "0";
+}
+</script>
+
+<!-- OVERLAY END -->
+
+
+<!-- Nav Ends Here -->
+
+<!-- Nav Starts Here
+      <nav id="nav">
         <ul id="mainlist">
           <li><a href="partone.html">I</a></li>
           <li><a href="parttwo.html" class="active-page">II</a></li>
           <li><a href="partthree.html">III</a></li>
 
-            <div id="sublist">
-              <a class="sublist" href="#section-19">19. A Reflection on the Things I Think I Know</a>
-              <a class="sublist" href="#section-20">20. A Reflection on Language</a>
-              <a class="sublist" href="#section-21">21. A Reflection on Myself</a>
-              <a class="sublist" href="#section-22">22. In Loving Memory</a>
-              <a class="sublist" href="#section-23">23. Case</a>
-              <a class="sublist" href="#section-24">24. A Reflection on Odd Numbers</a>
-              <a class="sublist" href="#section-25">25. Les Calanques: Today for Tomorrow</a>
-              <a class="sublist" href="#section-26">26. Avignon: A Stone’s Throw</a>
-              <a class="sublist" href="#section-27">27. A Reflection on Size</a>
-              <a class="sublist" href="#section-28">28. Avignon: Near Glass Houses</a>
-              <a class="sublist" href="#section-29">29. Today’s Waves</a>
-              <a class="sublist" href="#section-30">30. Noble Goblin</a>
-              <a class="sublist" href="#section-31">31. The Beginning or the End: A Matter of Perspective</a>
-              <a class="sublist" href="#section-32">32. Psalm 69</a>
-              <a class="sublist" href="#section-33">33. A Reflection on the Barriers Language Breaks</a>
-              <a class="sublist" href="#section-34">34. Slipshod</a>
-              <a class="sublist" href="#section-35">35. Naturally</a>
-              <a class="sublist" href="#section-36">36. Somewhere, Moving Fast, Loud Noises</a>
-              <a class="sublist" href="#section-37">37. East and West Coast Come Together For an Agreeable Day in Barcelona</a>
-              <a class="sublist" href="#section-38">38. Lightswitch</a>
-              <a class="sublist" href="#section-39">39. (de)construction</a>
-              <a class="sublist" href="#section-40">40. Timetable</a>
-              <a class="sublist" href="#section-41">41. Minerva, Come</a>
-              <a class="sublist" href="#section-42">42. Wake</a>
 
-            </div>
 
           <li><a href="partfour.html">IV</a></li>
           <li><a href="partfive.html">V</a></li>
@@ -77,7 +119,7 @@ $(function() {
           <li><a href="partseven.html">VII</a></li>
         </ul>
       </nav>
-<!-- Nav Ends Here -->
+ Nav Ends Here -->
 
       <div class="grid">
           <div class="col-1-2">
