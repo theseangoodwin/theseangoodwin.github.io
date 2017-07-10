@@ -297,11 +297,12 @@ nav {
   color: #bbb;
 }
 
-#mainlist a:hover {
+#mainlist li:hover {
   text-decoration: none;
-  color: #333;
+  color: #000;
   background-color: yellow;
-  font-style: italic;
+  transform: skewX(-20deg);
+  transition: 0.5s;
 }
 
 /* OVERLAY TEST */

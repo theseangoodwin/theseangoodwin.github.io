@@ -51,35 +51,35 @@ $(function() {
 
 <!-- OVERLAY -->
 
-<div id="myNav" class="overlay" onclick="closeNav()">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
+<div id="myNav" class="overlay" onclick="closeNav();unlockScroll()">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav();unlockScroll()">Close</a>
   <div class="overlay-content">
 
     <div id="sublist">
-      <a class="sublist" href="#section-19">19. A Reflection on the Things I Think I Know</a>
-      <a class="sublist" href="#section-20">20. A Reflection on Language</a>
-      <a class="sublist" href="#section-21">21. A Reflection on Myself</a>
-      <a class="sublist" href="#section-22">22. In Loving Memory</a>
-      <a class="sublist" href="#section-23">23. Case</a>
-      <a class="sublist" href="#section-24">24. A Reflection on Odd Numbers</a>
-      <a class="sublist" href="#section-25">25. Les Calanques: Today for Tomorrow</a>
-      <a class="sublist" href="#section-26">26. Avignon: A Stone’s Throw</a>
-      <a class="sublist" href="#section-27">27. A Reflection on Size</a>
-      <a class="sublist" href="#section-28">28. Avignon: Near Glass Houses</a>
-      <a class="sublist" href="#section-29">29. Today’s Waves</a>
-      <a class="sublist" href="#section-30">30. Noble Goblin</a>
-      <a class="sublist" href="#section-31">31. The Beginning or the End: A Matter of Perspective</a>
-      <a class="sublist" href="#section-32">32. Psalm 69</a>
-      <a class="sublist" href="#section-33">33. A Reflection on the Barriers Language Breaks</a>
-      <a class="sublist" href="#section-34">34. Slipshod</a>
-      <a class="sublist" href="#section-35">35. Naturally</a>
-      <a class="sublist" href="#section-36">36. Somewhere, Moving Fast, Loud Noises</a>
-      <a class="sublist" href="#section-37">37. East and West Coast Come Together For an Agreeable Day in Barcelona</a>
-      <a class="sublist" href="#section-38">38. Lightswitch</a>
-      <a class="sublist" href="#section-39">39. (de)construction</a>
-      <a class="sublist" href="#section-40">40. Timetable</a>
-      <a class="sublist" href="#section-41">41. Minerva, Come</a>
-      <a class="sublist" href="#section-42">42. Wake</a>
+      <a class="sublist" href="#section-19" onclick="closeNav();unlockScroll()">19. A Reflection on the Things I Think I Know</a>
+      <a class="sublist" href="#section-20" onclick="closeNav();unlockScroll()">20. A Reflection on Language</a>
+      <a class="sublist" href="#section-21" onclick="closeNav();unlockScroll()">21. A Reflection on Myself</a>
+      <a class="sublist" href="#section-22" onclick="closeNav();unlockScroll()">22. In Loving Memory</a>
+      <a class="sublist" href="#section-23" onclick="closeNav();unlockScroll()">23. Case</a>
+      <a class="sublist" href="#section-24" onclick="closeNav();unlockScroll()">24. A Reflection on Odd Numbers</a>
+      <a class="sublist" href="#section-25" onclick="closeNav();unlockScroll()">25. Les Calanques: Today for Tomorrow</a>
+      <a class="sublist" href="#section-26" onclick="closeNav();unlockScroll()">26. Avignon: A Stone’s Throw</a>
+      <a class="sublist" href="#section-27" onclick="closeNav();unlockScroll()">27. A Reflection on Size</a>
+      <a class="sublist" href="#section-28" onclick="closeNav();unlockScroll()">28. Avignon: Near Glass Houses</a>
+      <a class="sublist" href="#section-29" onclick="closeNav();unlockScroll()">29. Today’s Waves</a>
+      <a class="sublist" href="#section-30" onclick="closeNav();unlockScroll()">30. Noble Goblin</a>
+      <a class="sublist" href="#section-31" onclick="closeNav();unlockScroll()">31. The Beginning or the End: A Matter of Perspective</a>
+      <a class="sublist" href="#section-32" onclick="closeNav();unlockScroll()">32. Psalm 69</a>
+      <a class="sublist" href="#section-33" onclick="closeNav();unlockScroll()">33. A Reflection on the Barriers Language Breaks</a>
+      <a class="sublist" href="#section-34" onclick="closeNav();unlockScroll()">34. Slipshod</a>
+      <a class="sublist" href="#section-35" onclick="closeNav();unlockScroll()">35. Naturally</a>
+      <a class="sublist" href="#section-36" onclick="closeNav();unlockScroll()">36. Somewhere, Moving Fast, Loud Noises</a>
+      <a class="sublist" href="#section-37" onclick="closeNav();unlockScroll()">37. East and West Coast Come Together For an Agreeable Day in Barcelona</a>
+      <a class="sublist" href="#section-38" onclick="closeNav();unlockScroll()">38. Lightswitch</a>
+      <a class="sublist" href="#section-39" onclick="closeNav();unlockScroll()">39. (de)construction</a>
+      <a class="sublist" href="#section-40" onclick="closeNav();unlockScroll()">40. Timetable</a>
+      <a class="sublist" href="#section-41" onclick="closeNav();unlockScroll()">41. Minerva, Come</a>
+      <a class="sublist" href="#section-42" onclick="closeNav();unlockScroll()">42. Wake</a>
     </div>
 
   </div>
@@ -97,6 +97,17 @@ function closeNav() {
     document.getElementById("myNav").style.visibility = "hidden";
     document.getElementById("myNav").style.opacity = "0";
 }
+
+function lockScroll() {
+  document.getElementById("mainbody").classList.toggle("noscroll");
+  document.getElementById("mainbody").classList.toggle("scroll");
+}
+
+function unlockScroll() {
+  document.getElementById("mainbody").classList.toggle("scroll");
+  document.getElementById("mainbody").classList.toggle("noscroll");
+}
+
 </script>
 
 <!-- OVERLAY END -->
@@ -183,6 +194,7 @@ function closeNav() {
               </script>
               <!-- SVG Marseille Path -->
 
+<div class="stagger-content-delay">
                 <div class="mainimage">
                   <img src="./images/partfour/4-1.jpg" width="100%"/>
                   <h1 id="width150">TROISIÈME PARTIE: KILL THE FIRST SNAKE</h1>
@@ -425,7 +437,7 @@ function closeNav() {
           <p>–Glaves Ante</p>
       </section>
 
-
+</div>
 <!-- ==========
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
