@@ -46,6 +46,20 @@ body {
 
 }
 
+@keyframes slideDownfromTop {
+
+  0% {
+    transform: translateY(0px) skewY(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(30px) skewY(2deg);
+    opacity: 0;
+  }
+
+}
+
 .stagger {
   opacity: 0;
   animation: slideUpfromBottomSkew 2s ease 1s forwards;
@@ -64,6 +78,16 @@ body {
 .stagger-content-delay {
   opacity: 0;
   animation: slideUpfromBottom 2s ease 2s forwards;
+}
+
+.stagger-content-longdelay {
+  opacity: 0;
+  animation: slideUpfromBottom 2s ease 7s forwards;
+}
+
+.stagger-content-disappear {
+  opacity: 1;
+  animation: slideDownfromTop 2s ease 5s forwards;
 }
 
 .stagger-content-left {
@@ -165,6 +189,12 @@ body {
 a {
   font-weight: 400;
   line-height: 1.3em;
+}
+
+#dedication {
+  position: fixed;
+  padding-top: 10%;
+  left: 50%;
 }
 /* Index CSS End */
 
@@ -311,7 +341,7 @@ nav {
   transition: 0.5s;
 }
 
-/* OVERLAY TEST */
+/* OVERLAY */
 
 .overlay {
   width: 100%;
@@ -392,7 +422,7 @@ nav {
   }
 }
 
-/* OVERLAY TEST END */
+/* OVERLAY END */
 
 /* SUBLIST SETTINGS */
 #sublist {
@@ -406,16 +436,8 @@ nav {
   font-family: 'Fira Mono', 'Cousine', monospace;
   font-weight: 100;
   letter-spacing: 1px;
-  /* font-size: 0.4em;
-  line-height: 1.2em; */
   padding: 3% 20% 3% 20%;
-  /* border-bottom: 2px solid #eee; */
 }
-
-/*
-.active-page {
-  background-color: ;
-} */
 
 /* NAV THINGS END */
 
