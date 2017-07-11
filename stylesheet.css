@@ -342,7 +342,7 @@ nav {
   text-decoration: none;
   color: #000;
   background-color: yellow;
-  transform: skewX(-20deg);
+  font-style: italic;
   transition: 0.5s;
 }
 
