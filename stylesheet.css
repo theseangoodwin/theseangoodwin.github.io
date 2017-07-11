@@ -196,6 +196,11 @@ a {
   padding-top: 10%;
   left: 50%;
 }
+
+#dedication-img {
+  top: 5em;
+  opacity: 0.3;
+}
 /* Index CSS End */
 
 
