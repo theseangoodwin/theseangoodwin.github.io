@@ -82,12 +82,12 @@ body {
 
 .stagger-content-longdelay {
   opacity: 0;
-  animation: slideUpfromBottom 2s ease 7s forwards;
+  animation: slideUpfromBottom 2s ease 2.5s forwards;
 }
 
 .stagger-content-disappear {
   opacity: 1;
-  animation: slideDownfromTop 2s ease 5s forwards;
+  animation: slideDownfromTop 2s ease 2s forwards;
 }
 
 .stagger-content-left {
