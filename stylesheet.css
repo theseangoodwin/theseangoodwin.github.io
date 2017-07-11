@@ -408,6 +408,17 @@ nav {
   color: #777;
 }
 
+#nav-home {
+  position: fixed;
+  left: 1.2em;
+  top: 1.2em;
+}
+
+#nav-home a:hover {
+  color: none;
+  background-color: rgba(240,240,240, 0);
+}
+
 .noscroll {
   overflow: hidden;
   margin: 0;
