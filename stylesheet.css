@@ -316,6 +316,8 @@ ul {
 
 #mainlist li:hover {
   text-decoration: line-through;
+  color: #000;
+  transition: 1s;
 }
 
 /* FONT STACK */
