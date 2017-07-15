@@ -309,6 +309,14 @@ ul {
   overflow: auto;
 }
 
+ul li {
+  height: 12%;
+}
+
+ul li:hover {
+  text-decoration: line-through;
+}
+
 /* FONT STACK */
 
 /* NAV THINGS */
@@ -337,7 +345,7 @@ nav {
   text-decoration: none;
   color: #bbb;
 }
-
+/*
 #mainlist li:hover {
   text-decoration: none;
   color: #000;
@@ -345,7 +353,7 @@ nav {
   font-style: italic;
   transition: 0.5s;
 }
-
+*/
 /* OVERLAY */
 
 .overlay {
