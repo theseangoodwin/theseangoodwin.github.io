@@ -309,12 +309,12 @@ ul {
   overflow: auto;
 }
 
-ul li {
+#mainlist li {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-ul li:hover {
+#mainlist li:hover {
   text-decoration: line-through;
 }
 
@@ -346,15 +346,6 @@ nav {
   text-decoration: none;
   color: #bbb;
 }
-/*
-#mainlist li:hover {
-  text-decoration: none;
-  color: #000;
-  background-color: yellow;
-  font-style: italic;
-  transition: 0.5s;
-}
-*/
 /* OVERLAY */
 
 .overlay {
